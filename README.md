@@ -22,5 +22,7 @@ Screenshots:
 ![Check function body](/1510210328_2017-11-09_TKX67tj8jz.png?raw=true "Check function body")  
 
 
+See ? I don't require any prior knowledge to any commands of pip3/cc/typea above, I just need to type `typea <command>` and boom, that's all. 
 
+Of course, you need knowledge like `dpkg -S $(which namei)` if you want to further research, but this typea is enough as a quick look, without required you type `file <command>`, `file <alias path>`, `realpath <alias path>`, `file <realpath of alias path>`, `ls -la <realpath of alias path>`, highlight the function body, ... etc, there's only one command :)
 
