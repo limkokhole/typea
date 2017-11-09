@@ -22,12 +22,12 @@
 #jus noticed `type -a` will make 2>/dev/null become 2> [1 SPACE] /dev/null
 #rf: http://unix.stackexchange.com/a/282319/64403, even though type has advantage included executable (`$ l /usr/bin/ | g '\-\-\.'` to find out those files), but type -a included multiple symlink like /usr/bin, /bin, so it win. 
 
-function typea3 {
+function typea {
  if (( "$#" == 0 )); then echo -e 'Usage: typea command OR command_path'; return 1; fi;
  if (( "$#" == 1 )); then vzone '-' r b; fi;
- type -a "$1" | highsh; vzone '-' y b; type -a "$1" | while IFS=" " read -r line; do echo "$line" | grep "^$1 is /" >/dev/null && atom=(`echo "${line}"`) && ls --color=always -lahiF --context "${atom[2]}" | awk 'NR>1{print PREV} {PREV=$0} END{printf("%s",$0)}' && rp=`realpath "${atom[2]}"` && if [ "$rp" == "${atom[2]}" ]; then echo; file "${atom[2]}"; echo; else echo ' --> ... --->' `ls --color=always -F $rp`; printf "%s" "${p_lblue}"; echo "[goto $rp]"; printf "%s" "${p_orig}"; typea3 "$rp" 'recur' | awk 'NR>1{print PREV} {PREV=$0} END{printf("%s",$0)}'; printf "%s" "${p_lblue}"; echo "[return $rp]"; echo; namei -l "${atom[2]}"; printf "%s" "${p_orig}"; fi; done
+ type -a "$1" | highsh; vzone '-' y b; type -a "$1" | while IFS=" " read -r line; do echo "$line" | grep "^$1 is /" >/dev/null && atom=(`echo "${line}"`) && ls --color=always -lahiF --context "${atom[2]}" | awk 'NR>1{print PREV} {PREV=$0} END{printf("%s",$0)}' && rp=`realpath "${atom[2]}"` && if [ "$rp" == "${atom[2]}" ]; then echo; file "${atom[2]}"; echo; else echo ' --> ... --->' `ls --color=always -F $rp`; printf "%s" "${p_lblue}"; echo "[goto $rp]"; printf "%s" "${p_orig}"; typea "$rp" 'recur' | awk 'NR>1{print PREV} {PREV=$0} END{printf("%s",$0)}'; printf "%s" "${p_lblue}"; echo "[return $rp]"; echo; namei -l "${atom[2]}"; printf "%s" "${p_orig}"; fi; done
  if (( "$#" == 1 )); then vzone '-' g b; whereis "$1"; echo; fi;
 }
-export -f typea3 #to be able used typea on `$ find . -type f -exec bash -c 'typea "$1"' - {} \;`, but unfortunately this got prefix ./ on each file
+export -f typea #to be able used typea on `$ find . -type f -exec bash -c 'typea "$1"' - {} \;`, but unfortunately this got prefix ./ on each file
 #so do this instead: find /usr/bin/  -printf '%f\n' | while read f; do typea "$f"; done #rf: http://stackoverflow.com/questions/4763041/strip-leading-dot-from-filenames-bash-script
 
