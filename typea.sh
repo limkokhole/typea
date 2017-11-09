@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 #Author: <limkokhole@gmail.com>
 
+#typea will command not found if pipe with alias, so pls use func
+function highsh () {
+    highlight -O xterm256 -S sh "$@"
+}
+export -f highsh
+
 export p_lgreen=$(tput setaf 118)
 export STDERRED_ESC_CODE=`echo -e "$p_lgreen"` #used by stderred which default is red
 
