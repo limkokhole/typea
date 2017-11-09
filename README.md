@@ -1,5 +1,7 @@
 # typea
 
+Quickly analysis a command info. `typea` naming inspired by command `type -a`.  
+
 How to use:  
 
 [1]  source it first, or normally put its code in ~/.bash_aliases  
