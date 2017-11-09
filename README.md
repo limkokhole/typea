@@ -13,7 +13,7 @@ Screenshots:
 [1] Qucik check file type (so now I know it's an ascii python file, not a EXE, and I will edit it):   
 ![Check file type](/1510210160_2017-11-09_PPabjenvK6.png?raw=true "Check file type")  
 
-[2] Quick check symlink path (Please ensure you has installed namei command which located package util-linux):   
+[2] Quick check symlink path (Please ensure you has installed namei command which located in package util-linux):   
 ![Check symlink path](/1510210226_2017-11-09_mi9R2urpJw.png?raw=true "Check symlink path")  
 
 [3] Quick check function body:  
