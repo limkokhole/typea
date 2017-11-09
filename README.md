@@ -13,7 +13,7 @@ Screenshots:
 [1] Check file type:   
 ![Check file type](/1510210160_2017-11-09_PPabjenvK6.png?raw=true "Check file type")  
 
-[2] Check symlink path:   
+[2] Check symlink path (Please ensure you has installed namei command which located package util-linux):   
 ![Check symlink path](/1510210226_2017-11-09_mi9R2urpJw.png?raw=true "Check symlink path")  
 
 [3] Check function body:  
