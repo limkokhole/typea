@@ -2,10 +2,23 @@
 
 How to use:  
 
-[1]  source it first, or normally put its code in ~/.bash_aliases
+[1]  source it first, or normally put its code in ~/.bash_aliases  
+
 xb@dnxb:~/note/sh/typea$ chmod +x typea.sh; . typea.sh  
 
-[2] Run as `typea <command>`, enjoy :)
+[2] Run as `typea <command>`, enjoy :)  
+
+Screenshots:  
+
+[1] Check file type:   
+![Check file type](/1510210160_2017-11-09_PPabjenvK6.png?raw=true "Check file type")  
+
+[2] Check symlink path:   
+![Check symlink path](/1510210226_2017-11-09_mi9R2urpJw.png?raw=true "Check symlink path")  
+
+[3] Check function body:  
+![Check function body](/1510210328_2017-11-09_TKX67tj8jz.png?raw=true "Check function body")  
+
 
 
 
