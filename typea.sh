@@ -30,15 +30,6 @@ export p_lblue=$(tput setaf 50) #print light blue
 export p_yellow=$(tput setaf 11) #print yellow
 export p_orig=$(tput sgr0) #print back original color
 
-#change bg color for ssh session, not stable
-function myssh() {
-    bg_yellow=$(tput setab 11)
-    printf "%s" "${bg_yellow}"
-    ssh "$@"
-    clear
-}
-
-
 vzone() { #mainly use for ~/.vimrc lines separator
 
     #rf: http://unix.stackexchange.com/questions/25945/how-to-check-if-there-are-no-parameters-provided-to-a-command
